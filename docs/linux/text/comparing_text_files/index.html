@@ -19,28 +19,13 @@
 <meta property="og:title" content="Comparing Text Files" />
 <meta property="og:description" content="How compare text files using the Linux command line." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://datascientistsamchan.github.io/Blog/linux/text/comparing_text_files/" />
-
-
-
-<meta property="article:published_time" content="2018-06-17T00:00:00-07:00"/>
-
+<meta property="og:url" content="https://datascientistsamchan.github.io/Blog/linux/text/comparing_text_files/" /><meta property="article:published_time" content="2018-06-17T00:00:00-07:00"/>
 <meta property="article:modified_time" content="2018-06-17T00:00:00-07:00"/>
-
-
-
-
-
-
-
-
-
-
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Comparing Text Files"/>
 <meta name="twitter:description" content="How compare text files using the Linux command line."/>
-<meta name="generator" content="Hugo 0.40.1" /> 
+<meta name="generator" content="Hugo 0.51" /> 
     
     
 <script type="application/ld+json">
@@ -49,7 +34,7 @@
   "@type": "BlogPosting",
   "headline": "Comparing Text Files",
   "url": "https://datascientistsamchan.github.io/Blog/linux/text/comparing_text_files/",
-  "wordCount": "243",
+  "wordCount": "241",
   "datePublished": "2018-06-17T00:00:00-07:00",
   "dateModified": "2018-06-17T00:00:00-07:00",
   "author": {
@@ -171,12 +156,12 @@ MathJax.Hub.Config({
 
 <h2 id="create-text-file-1">Create Text File 1</h2>
 
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">echo &#34;Khaydarbi Melikov is a foot soldier.&#34; &gt;&gt; regiment_version1.txt<span class="err">
+<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">echo &#34;Khaydarbi Melikov is a foot soldier.&#34; &gt;&gt; regiment_version1.txt<span class="err">
 </span><span class="err"></span>echo &#34;Khaydarbi Melikov is a member of the the Maroon Martyrs regiment&#34; &gt;&gt; regiment_version1.txt</code></pre></div>
 
 <h2 id="create-text-file-2">Create Text File 2</h2>
 
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">echo &#34;Khaydarbi Melikov is a foot soldier.&#34; &gt;&gt; regiment_version2.txt<span class="err">
+<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">echo &#34;Khaydarbi Melikov is a foot soldier.&#34; &gt;&gt; regiment_version2.txt<span class="err">
 </span><span class="err"></span>echo &#34;Khaydarbi Melikov is a member of the Reserve regiment&#34; &gt;&gt; regiment_version2.txt</code></pre></div>
 
 <h2 id="view-text-file-1">View Text File 1</h2>
@@ -211,8 +196,8 @@ Khaydarbi Melikov is a member of the Reserve regiment
 
 <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">diff -c regiment_version1.txt regiment_version2.txt</code></pre></div>
 
-<pre><code>*** regiment_version1.txt   2018-08-03 11:20:07.313559654 -0700
---- regiment_version2.txt   2018-08-03 11:20:10.077617610 -0700
+<pre><code>*** regiment_version1.txt	2018-08-03 11:20:07.313559654 -0700
+--- regiment_version2.txt	2018-08-03 11:20:10.077617610 -0700
 ***************
 *** 1,2 ****
   Khaydarbi Melikov is a foot soldier.
