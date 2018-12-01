@@ -1,4 +1,4 @@
-name = "Berbera"
+name = "berbera"
 license = "GPL-3.0"
 description = "A bootstrap 4 Hugo theme for notes."
 tags = ["bootstrap", "blog", "font awesome"]
