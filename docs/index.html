@@ -1,883 +1,1755 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-66582-32');
-    </script>
-
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<meta property="og:title" content="Sam Chan" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://datascientistsamchan.github.io/Blog/" />
-
-
-
-<meta property="og:updated_time" content="2018-07-16T00:00:00-07:00"/>
-
-
-
-
-
-
-
-
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sam Chan"/>
-<meta name="twitter:description" content=""/>
-<meta name="generator" content="Hugo 0.40.1" /> 
-    
-    
-    
-    
-
-    <title>Sam Chan</title>
-
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-        crossorigin="anonymous">
-
-    
-    <link href="https://datascientistsamchan.github.io/Blog/css/custom.css" rel="stylesheet"> 
-    <link href="https://datascientistsamchan.github.io/Blog/css/syntax.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
-        
-    <link href="https://datascientistsamchan.github.io/Blog/index.xml" rel="alternate" type="application/rss+xml" title="Sam Chan" /> 
-    
-    <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
-</script>
-
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="https://datascientistsamchan.github.io/Blog/">Chris Albon</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav mr-auto"></ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ML/AI Notes
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#machine_learning">Machine Learning</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#deep_learning">Deep Learning</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#python">Python</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#statistics">Statistics</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#scala">Scala</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#postgresql">PostgreSQL</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#linux">Command Line</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#regex">Regular Expressions</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#mathematics">Mathematics</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#aws">AWS</a>
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/#computer_science">Computer Science</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://datascientistsamchan.github.io/Blog/#articles">Articles</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            About
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://datascientistsamchan.github.io/Blog/about/chris_albon/">About Chris</a>
-                            <a class="dropdown-item" href="https://github.com/chrisalbon">GitHub</a>
-                            <a class="dropdown-item" href="https://twitter.com/chrisalbon">Twitter</a>
-                            <a class="dropdown-item" href="https://www.instagram.com/chrisalbon/">Instagram</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-
-                
-<main>
-    <div class="homepage">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1>
-                    <span class="minor_line">Technical Notes On Using</span>
-                    <br>
-                    <span class="major_line">Data Science &amp; Artificial Intelligence</span>
-                    <br>
-                    <span class="minor_line">To Fight For Something That Matters</span>
-                </h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 blurb">
-                <p>
-                    <a href="https://chrisalbon.com/about/chris_albon/">I am a data scientist and machine learning engineer</a> with a decade of experience applying statistical
-                    learning, artificial intelligence, and software engineering to political, social, and humanitarian efforts
-                    -- from election monitoring to disaster relief. I work at
-                    <a href="http://www.devoted.com/">Devoted Health</a>, using data science and machine learning to help fix America's health care system.</p>
-                <p>Learning machine learning? Check out my
-                    <a href="https://machinelearningflashcards.com">Machine Learning Flashcards</a> or my book,
-                    <a href="https://amzn.to/2HwnWty">Machine Learning With Python Cookbook</a>.</p>
-            </div>
-        </div>
-
-        <div class="row" id="machine_learning">
-            <div class="col-sm-12">
-                <h3 class="category_header">Machine Learning</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Vectors, Matrices, And Arrays</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Basics</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Preprocessing Structured Data</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Preprocessing Images</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Preprocessing Text</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Preprocessing Dates And Times</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Feature Engineering</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Feature Selection</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Model Evaluation</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Model Selection</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Linear Regression</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Logistic Regression</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Trees And Forests</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Nearest Neighbors</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Support Vector Machines</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Naive Bayes</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Clustering</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="deep_learning">
-            <div class="col-sm-12">
-                <h3 class="category_header">Deep Learning</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Keras</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="python">
-            <div class="col-sm-12">
-                <h3 class="category_header">Python</h3>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Basics</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Data Wrangling</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Data Visualization</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Web Scraping</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Testing</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Logging</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>       
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Other</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="statistics">
-            <div class="col-sm-12">
-                <h3 class="category_header">Statistics</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Frequentist</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="scala">
-            <div class="col-sm-12">
-                <h3 class="category_header">Scala</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="regex">
-            <div class="col-sm-12">
-                <h3 class="category_header">Regular Expressions</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="postgresql">
-            <div class="col-sm-12">
-                <h3 class="category_header">PostgreSQL</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Basics</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Add, Delete, Change Rows</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Merging And Joining</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Tables</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Text</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Numeric</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Dates</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="mathematics">
-            <div class="col-sm-12">
-                <h3 class="category_header">Mathematics</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="aws">
-            <div class="col-sm-12">
-                <h3 class="category_header">AWS</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Basics</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">S3 - CLI</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">S3 - Boto</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="computer_science">
-            <div class="col-sm-12">
-                <h3 class="category_header">Computer Science</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Algorithms</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="linux">
-            <div class="col-sm-12">
-                <h3 class="category_header">Linux Command Line</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Basics</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Inputs And Outputs</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Search</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Text</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Flow Control</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Processes</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Tests</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="articles">
-            <div class="col-sm-12">
-                <h3 class="category_header">Articles</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="article_list card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</main>
-
-
-            </div>
-
-        </div>
-    </div>
-
-    
-
-    <footer class="footer text-center">
-        <div class="container">
-            <span class="text-muted">This project contains 584 pages and is available on <a href="https://github.com/chrisalbon/notes">GitHub</a>. Copyright &copy; Chris Albon, <time datetime="2018">2018</time>.</span>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+<div>Hello there!</div>
+<div>
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/add_columns_to_text/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/copy_files_and_directories/</br>
+
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/count_unique_rows/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/delete_files_and_directories/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/delete_files_and_subdirectories_in_current_directory/</br>
+
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/extract_text/</br>
+
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/find_and_replace/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/move_files_and_directories/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/rename_file/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/see_disk_drive_space/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/create_postgresql_database_with_python/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/add_column/</br>
+
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/adding_line_numbers/</br>
+
+    postgresql\dates\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/dates/adding_or_substracting_time/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/all_unique_values_in_two_tables/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/append_error_to_file/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/append_file_contents_to_another_file/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/append_outputs_to_file/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/append_output_and_errors_to_file/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/apply_operation_to_column/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/archive_and_unarchive_files/</br>
+
+    postgresql\numeric\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/numeric/max_min_and_average_of_column/</br>
+
+    postgresql\numeric\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/numeric/calculate_running_total/</br>
+
+    postgresql\numeric\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/numeric/calculate_sum_of_column/</br>
+
+    postgresql\dates\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/dates/calculate_time_duration/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/cartesian_product/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/chain_multiple_commands/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/change_permissions/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/change_values/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/changing_directories/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/check_current_date_and_time/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/compare_values_to_subquery/</br>
+
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/comparing_text_files/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/concatenate_multiple_files/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/concatenate_multiple_tables/</br>
+
+    postgresql\text\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/text/concatenate_values/</br>
+
+    postgresql\numeric\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/numeric/convert_floats_to_integers/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/copy_rows_from_one_table_to_another/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/copy_table_structure/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/count_rows/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/count_unique_values/</br>
+
+    aws\s3\cli\<br>
+    https://datascientistsamchan.github.io/Blog/aws/s3/cli/create_bucket/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/create_column_aliases/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/create_column_condition_on_another_column/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/create_column_index/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/create_column_of_values/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/create_command/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/create_directory/</br>
+
+    linux\environment\<br>
+    https://datascientistsamchan.github.io/Blog/linux/environment/create_environment_variables/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/create_file/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/create_primary_key/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/create_sequential_list_of_files_or_directories/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/create_subquery/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/create_symbolic_links/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/create_table/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/create_table_with_default_values/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/create_table_with_uuids/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/create_temporary_table/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/create_view/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/delete_all_rows/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/delete_duplicates/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/delete_primary_key/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/delete_rows/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/delete_rows_that_dont_exist_in_another_table/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/delete_table/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/delete_table_with_views/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/delete_view/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/duplicate_table/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/examine_a_query/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/exit_terminal_session/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/export_to_csv/</br>
+
+    postgresql\text\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/text/extract_characters_from_strings/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/find_directories/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/find_files/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/find_files_based_on_multiple_conditions/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/find_files_by_filename/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/find_files_by_size/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/find_programs_location/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/find_symbolic_links/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/find_values_in_both_tables/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/find_values_in_one_table_and_not_another/</br>
+
+    linux\flow_control\<br>
+    https://datascientistsamchan.github.io/Blog/linux/flow_control/for_loops/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/get_help_with_a_command/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/get_information_on_a_file/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/group_rows/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/group_rows_with_conditions/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/if_else/</br>
+
+    linux\flow_control\<br>
+    https://datascientistsamchan.github.io/Blog/linux/flow_control/if_else_for_integers/</br>
+
+    linux\flow_control\<br>
+    https://datascientistsamchan.github.io/Blog/linux/flow_control/if_else_for_strings/</br>
+
+    linux\flow_control\<br>
+    https://datascientistsamchan.github.io/Blog/linux/flow_control/if_else_with_multiple_conditions/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/import_csv/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/inner_join/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/insert_rows/</br>
+
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/join_and_sort_text/</br>
+
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/join_columns/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/join_multiple_tables/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/left_join/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/list_avaliable_commands/</br>
+
+    aws\s3\cli\<br>
+    https://datascientistsamchan.github.io/Blog/aws/s3/cli/list_buckets/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/list_columns_in_table/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/list_indexed_columns/</br>
+
+    linux\processes\<br>
+    https://datascientistsamchan.github.io/Blog/linux/processes/list_processes/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/list_tables_in_database/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/list_contents_of_a_directory/</br>
+
+    postgresql\text\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/text/lower_case_and_upper_case/</br>
+
+    postgresql\numeric\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/numeric/mathematical_operations_on_column/</br>
+
+    linux\processes\<br>
+    https://datascientistsamchan.github.io/Blog/linux/processes/monitor_processes/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/multiple_commands_on_one_line/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/outer_join/</br>
+
+    postgresql\text\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/text/partial_string_match/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/ping_website/</br>
+
+    linux\text\<br>
+    https://datascientistsamchan.github.io/Blog/linux/text/quickly_view_file_contents/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/rename_columns_in_views/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/replace_missing_values/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/retrieve_only_a_few_rows/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/retrieve_random_subset_of_rows/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/retrieve_rows/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/retrieve_rows_based_on_condition/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/retrieve_rows_based_on_multiple_conditions/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/retrieve_subset_columns/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/retrieving_missing_values/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/right_join/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/save_output_to_file_in_middle_of_command_chain/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/save_queries_as_variables/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/search_file_names/</br>
+
+    linux\search\<br>
+    https://datascientistsamchan.github.io/Blog/linux/search/search_contents_of_a_file/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/see_free_memory/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/see_who_is_logged_in/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/select_files_based_on_filename/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/select_highest_value_in_each_group/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/select_values_between_two_values/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/self_join/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/show_column_information/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/silence_errors/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/sort_rows/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/sort_rows/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/sort_rows_in_groups/</br>
+
+    postgresql\merging_and_joining\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/merging_and_joining/stack_tables/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/synchronize_files_and_directories/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/test_if_rows_exist_in_subquery/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/track_route_of_network_traffic/</br>
+
+    postgresql\add_delete_change\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/add_delete_change/update_rows_based_on_another_table/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/use_column_aliases_with_where_clause/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/retrieve_rows_where_value_matches_element_of_list/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/view_file_type/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/view_file_contents/</br>
+
+    linux\environment\<br>
+    https://datascientistsamchan.github.io/Blog/linux/environment/view_aliases/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/view_current_working_directory/</br>
+
+    linux\environment\<br>
+    https://datascientistsamchan.github.io/Blog/linux/environment/view_environment_variables/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/view_first_and_last_parts_of_files/</br>
+
+    postgresql\tables\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/tables/view_size_of_table/</br>
+
+    postgresql\basics\<br>
+    https://datascientistsamchan.github.io/Blog/postgresql/basics/view_unique_values/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/write_errors_to_file/</br>
+
+    linux\inputs_and_outputs\<br>
+    https://datascientistsamchan.github.io/Blog/linux/inputs_and_outputs/write_output_to_file/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/zip_and_unzip_directories/</br>
+
+    linux\basics\<br>
+    https://datascientistsamchan.github.io/Blog/linux/basics/zip_and_unzip_files/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/columns_shared_by_two_data_frames/</br>
+
+    machine_learning\feature_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_selection/anova_f-value_for_feature_selection/</br>
+
+    about\<br>
+    https://datascientistsamchan.github.io/Blog/about/chris_albon/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/accuracy/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/adaboost_classifier/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/add_padding_around_string/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/adding_and_subtracting_matrices/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/adding_dropout/</br>
+
+    machine_learning\linear_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/linear_regression/adding_interaction_terms/</br>
+
+    machine_learning\clustering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/clustering/agglomerative_clustering/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/all_combinations_of_a_list_of_objects/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_apply_function_by_group/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/apply_operations_over_items_in_lists/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/apply_operations_to_elements/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_apply_operations_to_groups/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/applying_functions_to_list_items/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_apply_operations_to_dataframes/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/arithmetic_basics/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_assign_new_column_dataframe/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/assignment_operators/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_back_to_back_bar_plot/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/bag_of_words/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_bar_plot/</br>
+
+    python\logging\<br>
+    https://datascientistsamchan.github.io/Blog/python/logging/basic_logging/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/numpy_array_basic_operations/</br>
+
+    python\web_scraping\<br>
+    https://datascientistsamchan.github.io/Blog/python/web_scraping/beautiful_soup_html_basics/</br>
+
+    machine_learning\naive_bayes\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/naive_bayes/bernoulli_naive_bayes_classifier/</br>
+
+    statistics\frequentist\<br>
+    https://datascientistsamchan.github.io/Blog/statistics/frequentist/bessel_correction/</br>
+
+    computer_science\algorithms\<br>
+    https://datascientistsamchan.github.io/Blog/computer_science/algorithms/big-o_notation/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/binarize_image/</br>
+
+    computer_science\algorithms\<br>
+    https://datascientistsamchan.github.io/Blog/computer_science/algorithms/binary_search/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/blurring_images/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/break_list_into_chunks_of_equal_size/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/break_a_sequence_into_groups/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/break_up_dates_and_times_into_multiple_features/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_regex_to_create_columns/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/breaking_up_string_variables/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/brute_force_d20_simulator/</br>
+
+    computer_science\algorithms\<br>
+    https://datascientistsamchan.github.io/Blog/computer_science/algorithms/bubble_sort/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/calculate_difference_between_dates_and_times/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/calculate_dot_product_of_two_vectors/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/calculate_average_variance_and_standard_deviation/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/calculate_the_determinant_of_a_matrix/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/calculate_the_trace_of_a_matrix/</br>
+
+    machine_learning\naive_bayes\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/naive_bayes/calibrate_predicted_probabilities/</br>
+
+    machine_learning\support_vector_machines\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/support_vector_machines/calibrate_predicted_probabilities_in_svc/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/cartesian_product/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/chain_together_lists/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/change_data_type/</br>
+
+    machine_learning\feature_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_selection/chi-squared_for_feature_selection/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/chuck_sequence_into_equal_sized_groups/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/cleaning_text/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/seaborn_color_palettes/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/compare_two_dictionaries/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/compare_two_floats/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/concurrent_processing/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/construct_a_dictionary_from_multiple_lists/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/continue_and_break_loops/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/csv_to_python_code/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_convert_categorical_to_dummies/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_convert_numeric_categorical_to_numeric_with_patsy/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/convert_categorical_to_numeric/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_convert_to_datetime/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/convert_html_symbols_to_strings/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/convert_pandas_categorical_column_into_integers_for_scikit-learn/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/convert_strings_to_dates/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/convert_pandas_column_timezone/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/converting_a_dictionary_into_a_matrix/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/strings_to_datetime/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/convolutional_neural_network/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_dataframe_count_values/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/create_a_matrix/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/create_a_new_file_and_the_write_to_it/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_create_pipeline/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/create_a_range/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/create_a_sparse_matrix/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/create_a_temporary_file/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/create_a_vector/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_create_column_with_loop/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/create_baseline_classification_model/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/create_baseline_regression_model/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/creating_counts_of_items/</br>
+
+    machine_learning\linear_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/linear_regression/create_interaction_features/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_create_column_using_conditional/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/seaborn_pandas_timeseries_plot/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/create_list_from_dictionary_keys_and_values/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/seaborn_scatterplot/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/cropping_images/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/cross_validation_pipeline/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/cross_validation_parameter_tuning_grid_search/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/cross-validaton/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_crosstabs/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/custom_performance_metric/</br>
+
+    machine_learning\clustering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/clustering/dbscan_clustering/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/data_structure_basics/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/date_and_time_basics/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/decision_tree_classifier/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/decision_tree_regression/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_delete_duplicates/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/delete_observations_with_missing_values/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/deleting_missing_values/</br>
+
+    statistics\frequentist\<br>
+    https://datascientistsamchan.github.io/Blog/statistics/frequentist/demonstrate_the_central_limit_theorem/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/describe_a_matrix/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_dataframe_descriptive_stats/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/detect_edges/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/detecting_outliers/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/dictionary_basics/</br>
+
+    machine_learning\feature_engineering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_engineering/dimensionality_reduction_on_sparse_feature_matrix/</br>
+
+    test\<br>
+    https://datascientistsamchan.github.io/Blog/test/test/</br>
+
+    machine_learning\feature_engineering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_engineering/dimensionality_reduction_with_kernel_pca/</br>
+
+    machine_learning\feature_engineering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_engineering/dimensionality_reduction_with_pca/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/discretize_features/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/display_json/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/display_scientific_notation_as_floats/</br>
+
+    python\web_scraping\<br>
+    https://datascientistsamchan.github.io/Blog/python/web_scraping/beautiful_soup_drill_down/</br>
+
+    machine_learning\feature_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_selection/drop_highly_correlated_features/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_dropping_column_and_rows/</br>
+
+    machine_learning\linear_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/linear_regression/effect_of_alpha_on_lasso_regression/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/encode_days_of_the_week/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/encoding_ordinal_categorical_features/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/enhance_contrast_of_color_image/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/enhance_contrast_of_greyscale_image/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/enumerate_a_list/</br>
+
+    machine_learning\clustering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/clustering/evaluating_clustering/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/exiting_a_loop/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_expand_cells_containing_lists/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/extract_substring_using_regex/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/f1_score/</br>
+
+    machine_learning\logistic_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/logistic_regression/fast_c_hyperparameter_tuning/</br>
+
+    machine_learning\feature_engineering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_engineering/feature_extraction_with_pca/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/feature_importance/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/feature_selection_using_random_forest/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/feedforward_neural_network_for_binary_classification/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/feedforward_neural_network_for_multiclass_classification/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/feedforward_neural_network_for_regression/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/filter_a_sequence/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/filter_dataframes/</br>
+
+    machine_learning\model_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_selection/find_best_preprocessing_steps_during_model_selection/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/find_largest_key_or_value_in_a_map/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_find_largest_value_in_column/</br>
+
+    machine_learning\support_vector_machines\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/support_vector_machines/find_nearest_neighbors/</br>
+
+    machine_learning\support_vector_machines\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/support_vector_machines/find_support_vectors/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/find_the_max_value_in_a_dictionary/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/find_maximum_and_minimum/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/find_the_rank_of_a_matrix/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_find_unique_values/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/flatten_a_matrix/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/flatten_list_of_lists/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/flatten_sequence_of_sequences/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/for_loops/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/for_loop_a_map/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/for_looping/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/format_numbers_as_currency/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/formatting_numbers/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/function_annotation_examples/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/function_basics/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/functions_vs_generators/</br>
+
+    machine_learning\naive_bayes\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/naive_bayes/gaussian_naive_bayes_classifier/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/generate_text_reports_on_performance/</br>
+
+    python\other\<br>
+    https://datascientistsamchan.github.io/Blog/python/other/generate_tweets_using_markov_chain/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/generating_random_numbers_with_numpy/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/generator_expressions/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/geocoding_and_reverse_geocoding/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/geolocate_a_city_and_country/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/geolocate_a_city_or_country/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/getting_the_diagonal_of_a_matrix/</br>
+
+    git\<br>
+    https://datascientistsamchan.github.io/Blog/git/github_cheatsheet/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_group_by_time/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_grouped_bar_plot/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_group_data_by_time/</br>
+
+    machine_learning\feature_engineering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_engineering/group_observations_using_clustering/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/group_pandas_data_by_hour_of_the_day/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_group_rows_by/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/handle_imbalanced_classes_in_random_forests/</br>
+
+    machine_learning\logistic_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/logistic_regression/handling_imbalanced_classes_in_logistic_regression/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/handling_imbalanced_classes_with_downsampling/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/handling_imbalanced_classes_with_upsampling/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/handling_missing_values_in_time_series/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/handling_outliers/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/handling_time_zones/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/hard_wrapping_text/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/harris_corner_detector/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_hierarchical_data/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_histogram/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/how_to_use_default_dicts/</br>
+
+    machine_learning\model_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_selection/hyperparameter_tuning_using_grid_search/</br>
+
+    machine_learning\model_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_selection/hyperparameter_tuning_using_random_search/</br>
+
+    machine_learning\nearest_neighbors\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/nearest_neighbors/identifying_best_value_of_k/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/if_else/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/ifelse_on_any_or_all_elements/</br>
+
+    machine_learning\support_vector_machines\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/support_vector_machines/imbalanced_classes_in_svm/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/impute_missing_values_with_means/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/imputing_missing_class_labels/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/imputing_missing_class_labels_using_k-nearest_neighbors/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/increment_and_decrement_numbers/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/indexing_and_slicing_numpy_arrays/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/numpy_indexing_and_slicing/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/insert_variables_into_strings/</br>
+
+    computer_science\algorithms\<br>
+    https://datascientistsamchan.github.io/Blog/computer_science/algorithms/insertion_sort/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/installing_opencv/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/invert_a_matrix/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/isolate_colors/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/iterate_ifelse_over_list/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/iterate_over_a_map/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/iterate_over_multiple_lists_simultaneously/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/iterating_over_dictionary_keys/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_join_merge_dataframe/</br>
+
+    machine_learning\nearest_neighbors\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/nearest_neighbors/k-nearest_neighbors_classifer/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/lstm_recurrent_neural_network/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/lag_a_time_feature/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/lambda_functions/</br>
+
+    machine_learning\linear_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/linear_regression/lasso_regression/</br>
+
+    machine_learning\linear_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/linear_regression/linear_regression_scikitlearn/</br>
+
+    machine_learning\linear_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/linear_regression/linear_regression_using_scikit-learn/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_list_unique_values_in_column/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/load_json_file_into_pandas/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/load_excel_file_into_pandas/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_dataframe_load_xls/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/load_images/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_dataframe_importing_csv/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/loading_features_from_dictionaries/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/loading_scikit-learns_boston_housing_dataset/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/loading_scikit-learns_digits-dataset/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/loading_scikit-learns_iris_dataset/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/logical_operations/</br>
+
+    machine_learning\logistic_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/logistic_regression/logistic_regression/</br>
+
+    machine_learning\logistic_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/logistic_regression/logistic_regression_on_very_large_data/</br>
+
+    machine_learning\logistic_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/logistic_regression/logistic_regression_with_l1_regularization/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_long_to_wide/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/loop_a_collection/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/looping_over_two_lists/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_lowercase_column_names/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_make_new_columns_using_functions/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/make_numbers_pretty/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/make_simulated_data_for_classification/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/make_simulated_data_for_clustering/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/make_simulated_data_for_regression/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_scatterplot_from_pandas/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_map_values_to_values/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/mapping_a_function_to_a_collection/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_a_symbol/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_a_unicode_character/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_a_word/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_any_character/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_any_of_a_list_of_symbols/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_any_of_series_of_characters/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_any_of_series_of_words/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_dates/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_email_addresses/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_exact_text/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_integers_of_any_length/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_text_between_html_tags/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_times/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_urls/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_us_phone_numbers/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_us_uk_spellings/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_words_with_certain_ending/</br>
+
+    regex\patterns\<br>
+    https://datascientistsamchan.github.io/Blog/regex/patterns/match_zip_codes/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/matching_conditions/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/math_operations/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_simple_example/</br>
+
+    machine_learning\clustering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/clustering/meanshift_clustering/</br>
+
+    python\other\<br>
+    https://datascientistsamchan.github.io/Blog/python/other/mine_a_twitter_hashtags_and_words/</br>
+
+    machine_learning\clustering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/clustering/minibatch_k-means_clustering/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_missing_data/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/mocking_functions/</br>
+
+    machine_learning\model_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_selection/model_selection_using_grid_search/</br>
+
+    python\web_scraping\<br>
+    https://datascientistsamchan.github.io/Blog/python/web_scraping/monitor_a_website/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_moving_average/</br>
+
+    machine_learning\naive_bayes\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/naive_bayes/multinomial_logistic_regression/</br>
+
+    machine_learning\naive_bayes\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/naive_bayes/multinomial_naive_bayes_classifier/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/mutable_maps/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/n_dimension_arrays/</br>
+
+    machine_learning\naive_bayes\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/naive_bayes/naive_bayes_classifier_from_scratch/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/nested_cross_validation/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/nested_for_loops_using_list_comprehension/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/nesting_lists/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/neural_network_early_stopping/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/neural_network_weight_regularization/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_normalize_column/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/normalizing_observations/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/numpy_array_basics/</br>
+
+    machine_learning\logistic_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/logistic_regression/one-vs-rest_logistic_regression/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/one-hot_encode_features_with_multiple_labels/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/one-hot_encode_nominal_categorical_features/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/parallel_processing/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/parse_html/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/partial_function_applications/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/partial_functions/</br>
+
+    statistics\frequentist\<br>
+    https://datascientistsamchan.github.io/Blog/statistics/frequentist/pearsons_correlation_coefficient/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/perceptron_in_scikit-learn/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_pie_chart/</br>
+
+    machine_learning\model_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_selection/pipelines_with_parameter_optimization/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_pivot_tables/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/plot_the_learning_curve/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/plot_the_receiving_operating_characteristic_curve/</br>
+
+    machine_learning\support_vector_machines\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/support_vector_machines/plot_support_vector_classifier_hyperplane/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/plot_the_validation_curve/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/precision/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/preprocessing_categorical_features/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/preprocessing_data_for_neural_networks/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/preprocessing_iris_data/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/priority_queues/</br>
+
+    statistics\frequentist\<br>
+    https://datascientistsamchan.github.io/Blog/statistics/frequentist/probability_mass_functions/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/queues_and_stacks/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_change_column_of_strings/</br>
+
+    machine_learning\nearest_neighbors\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/nearest_neighbors/radius_based_nearest_neighbor_classifier/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/random_forest_classifier/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/random_forest_classifier_example/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/random_forest_regressor/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/random_integer_between_two_values/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_sampling_dataframe/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_dataframe_ranking_rows/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/recall/</br>
+
+    machine_learning\feature_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_selection/recursive_feature_elimination/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/recursive_functions/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/regular_expressions_basics/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/regex_by_example/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_dataframe_reindexing/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/remove_backgrounds/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/remove_punctuation/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/remove_stop_words/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_rename_column_headers/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_rename_multiple_columns/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/replace_characters/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/replacing_parts_of_strings/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_replace_values/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/rescale_a_feature/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/reshape_an_array/</br>
+
+    machine_learning\linear_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/linear_regression/ridge_regression/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/rolling_time_windows/</br>
+
+    machine_learning\support_vector_machines\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/support_vector_machines/svc_parameters_using_rbf_kernel/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/save_images/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/save_model_training_progress/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_saving_dataframe_as_csv/</br>
+
+    machine_learning\basics\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/basics/saving_machine_learning_models/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_simple_scatterplot/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/schedule_run_in_the_future/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/search_a_map/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_search_column_for_value/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/search_strings/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/search_strings_with_regex/</br>
+
+    machine_learning\preprocessing_dates_and_times\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_dates_and_times/select_date_and_time_ranges/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/select_important_features_in_random_forest/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/select_random_element_from_list/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_select_rows_when_column_has_certain_values/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_select_rows_containing_values/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_select_rows_multiple_filters/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/selecting_elements_in_an_array/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/filter_items_in_list_with_filter/</br>
+
+    machine_learning\linear_regression\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/linear_regression/selecting_best_alpha_value_in_ridge_regression/</br>
+
+    machine_learning\feature_engineering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_engineering/select_best_number_of_components_in_lda/</br>
+
+    machine_learning\feature_engineering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_engineering/select_best_number_of_components_in_tsvd/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_selecting_rows_on_conditions/</br>
+
+    computer_science\algorithms\<br>
+    https://datascientistsamchan.github.io/Blog/computer_science/algorithms/selection_sort/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/set_operations_on_sequences/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/set_the_color_of_a_matplotlib/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/sharpen_images/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/ski-tomasi_corner_detector/</br>
+
+    python\other\<br>
+    https://datascientistsamchan.github.io/Blog/python/other/scipy_simple_clustering/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_dataframe_examples/</br>
+
+    python\testing\<br>
+    https://datascientistsamchan.github.io/Blog/python/testing/simple_unit_test/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/sort_a_list_by_last_name/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/sort_a_list_of_strings_by_length/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_sorting_rows_dataframe/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/sorting_sequences/</br>
+
+    statistics\frequentist\<br>
+    https://datascientistsamchan.github.io/Blog/statistics/frequentist/spearmans_rank_correlation/</br>
+
+    machine_learning\model_evaluation\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/model_evaluation/split_data_into_training_and_test_sets/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_split_lat_and_long_into_variables/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/split_strings/</br>
+
+    python\data_visualization\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_visualization/matplotlib_percentage_stacked_bar_plot/</br>
+
+    machine_learning\preprocessing_structured_data\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_structured_data/standardize_a_feature/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/stemming_words/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/store_api_credentials_for_open_source_projects/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/streaming_data_pipeline/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/string_formatting/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/string_indexing/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_string_munging/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/string_operations/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/strip_whitespace/</br>
+
+    machine_learning\support_vector_machines\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/support_vector_machines/support_vector_classifier/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/swapping_variable_values/</br>
+
+    statistics\frequentist\<br>
+    https://datascientistsamchan.github.io/Blog/statistics/frequentist/t-tests/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/tag_parts_of_speech/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/tf-idf/</br>
+
+    python\testing\<br>
+    https://datascientistsamchan.github.io/Blog/python/testing/test_code_speed/</br>
+
+    python\testing\<br>
+    https://datascientistsamchan.github.io/Blog/python/testing/test_for_a_specific_exception/</br>
+
+    python\testing\<br>
+    https://datascientistsamchan.github.io/Blog/python/testing/test_if_an_output_is_close_to_a_value/</br>
+
+    python\testing\<br>
+    https://datascientistsamchan.github.io/Blog/python/testing/testable_documentation/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/titanic_competition_with_random_forest/</br>
+
+    machine_learning\preprocessing_text\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_text/tokenize_text/</br>
+
+    machine_learning\vectors_matrices_and_arrays\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/vectors_matrices_and_arrays/transpose_a_vector_or_matrix/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/try_catch_finally/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/try_except_finally/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/tuning_neural_network_hyperparameters/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/unpacking_a_tuple/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/unpacking_function_arguments/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/use_command_line_arguments_in_a_function/</br>
+
+    machine_learning\feature_engineering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_engineering/lda_for_dimensionality_reduction/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_list_comprehension/</br>
+
+    machine_learning\preprocessing_images\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/preprocessing_images/using_mean_color_as_a_feature/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/using_named_tuples_to_store_data/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_with_seaborn/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/variables_and_values/</br>
+
+    statistics\frequentist\<br>
+    https://datascientistsamchan.github.io/Blog/statistics/frequentist/variance_and_standard_deviation/</br>
+
+    machine_learning\feature_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_selection/variance_thresholding_binary_features/</br>
+
+    machine_learning\feature_selection\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/feature_selection/variance_thresholding_for_feature_selection/</br>
+
+    machine_learning\trees_and_forests\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/trees_and_forests/visualize_a_decision_tree/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/visualize_loss_history/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/visualize_neural_network_architecture/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/visualize_performance_history/</br>
+
+    python\other\<br>
+    https://datascientistsamchan.github.io/Blog/python/other/aisle_seat_probabilities/</br>
+
+    scala\basics\<br>
+    https://datascientistsamchan.github.io/Blog/scala/basics/zip_together_two_lists/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/any_all_max_min_sum/</br>
+
+    mathematics\basics\<br>
+    https://datascientistsamchan.github.io/Blog/mathematics/basics/argmin_and_argmax/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/if_and_if_else_statements/</br>
+
+    deep_learning\keras\<br>
+    https://datascientistsamchan.github.io/Blog/deep_learning/keras/k-fold_cross-validating_neural_networks/</br>
+
+    machine_learning\clustering\<br>
+    https://datascientistsamchan.github.io/Blog/machine_learning/clustering/k-means_clustering/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_data_structures/</br>
+
+    python\data_wrangling\<br>
+    https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_time_series_basics/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/repr_vs_str/</br>
+
+    python\basics\<br>
+    https://datascientistsamchan.github.io/Blog/python/basics/while_statements/</br>
+
+    articles\<br>
+    https://datascientistsamchan.github.io/Blog/articles/health_system_destruction_renamo_mozambique/</br>
+
+    articles\<br>
+    https://datascientistsamchan.github.io/Blog/articles/health_system_reconstruction_post_war_kosovo/</br>
+
+    articles\<br>
+    https://datascientistsamchan.github.io/Blog/articles/health_systems/</br>
+
+    articles\<br>
+    https://datascientistsamchan.github.io/Blog/articles/puzzle_of_rebel_mobilization/</br>
+
+    articles\<br>
+    https://datascientistsamchan.github.io/Blog/articles/what_i_learned_from_tracking_my_time_at_techstars/</br>
+
+    aws\basics\<br>
+    https://datascientistsamchan.github.io/Blog/aws/basics/run_project_jupyter_on_amazon_ec2/</br>
+
+<div>    
