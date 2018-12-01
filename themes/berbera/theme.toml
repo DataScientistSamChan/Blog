@@ -7,7 +7,7 @@ min_version = 0.25
 
 [author]
   name = "Sam Chan"
-  homepage = "https://datascientistsamchan.github.io"
+  homepage = "https://datascientistsamchan.github.io/Blog"
 
 [based on]
   name = "Alan Orth"
