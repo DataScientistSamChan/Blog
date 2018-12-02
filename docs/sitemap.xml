@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://datascientistsamchan.github.io/Blog/git/test/</loc>
-    <lastmod>2018-12-02T08:25:09-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://datascientistsamchan.github.io/Blog/git/new_test/</loc>
-    <lastmod>2018-12-03T00:14:24+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://datascientistsamchan.github.io/Blog/git/connecting_to_github_with_ssh/</loc>
     <lastmod>2018-12-02T22:01:17+08:00</lastmod>
   </url>
@@ -1633,11 +1623,6 @@
   </url>
   
   <url>
-    <loc>https://datascientistsamchan.github.io/Blog/git/github_cheatsheet_2/</loc>
-    <lastmod>2017-12-20T11:53:49-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_group_by_time/</loc>
     <lastmod>2017-12-20T11:53:49-07:00</lastmod>
   </url>
@@ -2941,7 +2926,7 @@
   
   <url>
     <loc>https://datascientistsamchan.github.io/Blog/</loc>
-    <lastmod>2018-12-02T08:25:09-08:00</lastmod>
+    <lastmod>2018-12-02T22:01:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
