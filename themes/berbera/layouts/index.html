@@ -877,7 +877,7 @@
                     <h4 class="card-header">Tests</h4>
                     <div class="card-body">
                         <ul>
-                            {{ range (where .Pages "File.Dir" "in" "/test/").ByTitle }}
+                            {{ range (where .Pages "File.Dir" "in" "/git/").ByTitle }}
                             <li>
                                 <a href="{{.Permalink}}">{{.Title}}</a>
                             </li>
