@@ -122,3 +122,17 @@ The `-u` sets the origin as the default for this branch
 ## Revert A Commit By Creating A New Commit With Opposite Changes
 
 `git revert <commitID>`
+
+## Force git pull to overwrite local files with remote master branch
+```
+git fetch --all
+git reset --hard origin/master
+```
+
+## git pull while maintaining conflicted current local commits
+```
+git checkout master
+git branch <new-branch-to-save-current-commits>
+git fetch --all
+git reset --hard origin/master
+```
