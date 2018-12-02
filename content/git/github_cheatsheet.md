@@ -136,10 +136,3 @@ git branch <new-branch-to-save-current-commits>
 git fetch --all
 git reset --hard origin/master
 ```
-
-$$
-y = \frac{1}{\sin{x}}的反函数\\
-\sin{x}=\frac{1}{y}\\
-x = \arcsin\frac{1}{y}
-$$
-
