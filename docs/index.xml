@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Useful Global Config</title>
+      <link>https://datascientistsamchan.github.io/Blog/git/useful_global_config/</link>
+      <pubDate>Sun, 02 Dec 2018 20:40:40 +0800</pubDate>
+      
+      <guid>https://datascientistsamchan.github.io/Blog/git/useful_global_config/</guid>
+      <description>replace git add -A &amp;amp;&amp;amp; git commit -m with git coa git config --global alias.coa &#39;!git add -A &amp;amp;&amp;amp; git commit -m&#39;</description>
+    </item>
+    
+    <item>
       <title>Add Columns To Text</title>
       <link>https://datascientistsamchan.github.io/Blog/linux/text/add_columns_to_text/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 -0700</pubDate>

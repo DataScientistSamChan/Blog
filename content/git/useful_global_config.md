@@ -1,7 +1,7 @@
 ---
 title: "Useful Global Config"
 date: 2018-12-02T20:40:40+08:00
-draft: true
+draft: false
 author: "Sam Chan"
 type: technical_note
 ---
