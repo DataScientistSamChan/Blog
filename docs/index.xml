@@ -3032,6 +3032,20 @@ Create A New Git Repository  Go to the fold of the project.
     </item>
     
     <item>
+      <title>GitHub Cheatsheet2</title>
+      <link>https://datascientistsamchan.github.io/Blog/git/github_cheatsheet_2/</link>
+      <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
+      
+      <guid>https://datascientistsamchan.github.io/Blog/git/github_cheatsheet_2/</guid>
+      <description>Find The Version Of Git git --version
+Create A New Git Repository  Go to the fold of the project.
+ Run git init
+  Clone An Existing Git Repository Cloning is the process of pulling down a copy of a repository stored on a server.
+ Go to the parent folder of where you want to repository&amp;rsquo;s folder to be in.
+ git clone [url to repository&#39;s git file] [name of folder / repository you want]</description>
+    </item>
+    
+    <item>
       <title>Group A Time Series With pandas</title>
       <link>https://datascientistsamchan.github.io/Blog/python/data_wrangling/pandas_group_by_time/</link>
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
